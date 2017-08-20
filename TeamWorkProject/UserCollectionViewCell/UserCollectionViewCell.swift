@@ -44,20 +44,15 @@ class UserCollectionViewCell: UICollectionViewCell, CellInterface {
             let imageData:NSData = NSData(contentsOf: imageUrl)!
             let image = UIImage(data: imageData as Data)
             avatarImageView.image = image
+        }else{
+        avatarImageView.image = UIImage(named: "teamwork.jpg")!
         }
-        
-        
-        
-        
-        //avatarImageView.image = user.avatar
+
         nameListLabel.text = projects.name
         nameGridLabel.text = projects.name
         let deadLine = self.GetDeadlineFromDateString(DateStr: projects.deadline)
-        let deadlineString = (String(deadLine) + " days ").localized
-        let userCommentsString = (String("9") + " to ").localized
-        let userLikesString = (String("10") + " deadline  •").localized
-        statisticLabel.text = deadlineString + userCommentsString + userLikesString
-        //statisticLabel.text = deadlineString + ""+""
+        let deadlineString = (String(deadLine) + " days to deadline ").localized
+        statisticLabel.text = deadlineString
     }
     
     func setupGridLayoutConstraints(_ transitionProgress: CGFloat, cellWidth: CGFloat) {
@@ -100,26 +95,15 @@ class UserCollectionViewCell: UICollectionViewCell, CellInterface {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyyMMdd"
         dateFormatter.locale = Locale.init(identifier: "en_GB")
-        
         let dateObj = dateFormatter.date(from: DateStr)
-        
         dateFormatter.dateFormat = "MM-dd-yyyy"
-        print("Dateobj: \(dateFormatter.string(from: dateObj!))")
-        
         let calendar = NSCalendar.current
-        
         // Replace the hour (time) of both dates with 00:00
         let date1 = calendar.startOfDay(for: Date())
         let date2 = calendar.startOfDay(for: dateObj!)
-        
         let components = calendar.dateComponents([.day], from: date1, to: date2)
-        print(components)
-        
-        let deadlineDays = components .hashValue
-        
-        print(deadlineDays)
-        
         return components.day!
+        
     }
     
     
