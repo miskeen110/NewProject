@@ -45,7 +45,7 @@ class UserCollectionViewCell: UICollectionViewCell, CellInterface {
             let image = UIImage(data: imageData as Data)
             avatarImageView.image = image
         }else{
-        avatarImageView.image = UIImage(named: "teamwork.jpg")!
+        avatarImageView.image = UIImage(named: "teamwork1.jpg")!
         }
 
         nameListLabel.text = projects.name
