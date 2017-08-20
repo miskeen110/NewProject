@@ -30,6 +30,8 @@
 		5E640FDE1F48FF820075BFF6 /* Projects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E640FDD1F48FF820075BFF6 /* Projects.swift */; };
 		5E640FE21F49C02F0075BFF6 /* teamwork1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E640FE11F49C02F0075BFF6 /* teamwork1.jpg */; };
 		5E640FE41F49D8C80075BFF6 /* ExpandableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E640FE31F49D8C70075BFF6 /* ExpandableHeaderView.swift */; };
+		5E640FEE1F49E2BE0075BFF6 /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E640FED1F49E2BE0075BFF6 /* ProjectViewController.swift */; };
+		5E640FF01F49E32E0075BFF6 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E640FEF1F49E32E0075BFF6 /* Section.swift */; };
 		9BF3BCA2764F780EEF742CC3 /* Pods_TeamWorkProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E2B0BDE01EE8ADD528ABADF /* Pods_TeamWorkProjectTests.framework */; };
 		A715FE23D6C46F76A5F8B15A /* Pods_TeamWorkProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCA045C365833A5263FF3EDC /* Pods_TeamWorkProject.framework */; };
 /* End PBXBuildFile section */
@@ -72,6 +74,8 @@
 		5E640FDD1F48FF820075BFF6 /* Projects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Projects.swift; sourceTree = "<group>"; };
 		5E640FE11F49C02F0075BFF6 /* teamwork1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = teamwork1.jpg; sourceTree = "<group>"; };
 		5E640FE31F49D8C70075BFF6 /* ExpandableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableHeaderView.swift; sourceTree = "<group>"; };
+		5E640FED1F49E2BE0075BFF6 /* ProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
+		5E640FEF1F49E32E0075BFF6 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		8E2B0BDE01EE8ADD528ABADF /* Pods_TeamWorkProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeamWorkProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4188D0426A7075AFBB03860 /* Pods-TeamWorkProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamWorkProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TeamWorkProject/Pods-TeamWorkProject.debug.xcconfig"; sourceTree = "<group>"; };
 		AB142F2D02A281054B3D3B21 /* Pods-TeamWorkProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamWorkProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TeamWorkProjectTests/Pods-TeamWorkProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +129,8 @@
 			children = (
 				5E30E61E1F484F14005AE36C /* AppDelegate.swift */,
 				5E30E6201F484F14005AE36C /* ViewController.swift */,
+				5E640FEF1F49E32E0075BFF6 /* Section.swift */,
+				5E640FED1F49E2BE0075BFF6 /* ProjectViewController.swift */,
 				5E640FDD1F48FF820075BFF6 /* Projects.swift */,
 				5E30E6451F48688F005AE36C /* User.swift */,
 				5E30E6471F48689B005AE36C /* CellInterface.swift */,
@@ -267,6 +273,7 @@
 				TargetAttributes = {
 					5E30E61A1F484F14005AE36C = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = QWZ4DGCYQG;
 						ProvisioningStyle = Automatic;
 					};
 					5E30E62E1F484F14005AE36C = {
@@ -434,6 +441,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E640FDE1F48FF820075BFF6 /* Projects.swift in Sources */,
+				5E640FEE1F49E2BE0075BFF6 /* ProjectViewController.swift in Sources */,
 				5E30E6211F484F14005AE36C /* ViewController.swift in Sources */,
 				5E30E6481F48689B005AE36C /* CellInterface.swift in Sources */,
 				5E30E6441F486871005AE36C /* StringUtitlities.swift in Sources */,
@@ -441,6 +449,7 @@
 				5E30E63F1F486864005AE36C /* UserDataProvider.swift in Sources */,
 				5E30E65C1F4868B8005AE36C /* UserCollectionViewCell.swift in Sources */,
 				5E640FE41F49D8C80075BFF6 /* ExpandableHeaderView.swift in Sources */,
+				5E640FF01F49E32E0075BFF6 /* Section.swift in Sources */,
 				5E30E6431F486871005AE36C /* CustomColors.swift in Sources */,
 				5E30E61F1F484F14005AE36C /* AppDelegate.swift in Sources */,
 			);
@@ -582,6 +591,7 @@
 			baseConfigurationReference = A4188D0426A7075AFBB03860 /* Pods-TeamWorkProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QWZ4DGCYQG;
 				INFOPLIST_FILE = TeamWorkProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jatoi.TeamWorkProject;
@@ -596,6 +606,7 @@
 			baseConfigurationReference = DD05DB8C82FF438F00F65277 /* Pods-TeamWorkProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QWZ4DGCYQG;
 				INFOPLIST_FILE = TeamWorkProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jatoi.TeamWorkProject;
