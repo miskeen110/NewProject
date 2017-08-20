@@ -123,6 +123,8 @@ extension ViewController {
     
     func collectionView(_ collectionView: UICollectionView,didSelectItemAtIndexPath indexPath: IndexPath) {
         print("Hi \((indexPath as NSIndexPath).row)")
+        let projectInfoVC = storyboard?.instantiateViewController(withIdentifier: "ProjectInfo")
+        self.navigationController?.pushViewController(projectInfoVC!, animated: true);
     }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
