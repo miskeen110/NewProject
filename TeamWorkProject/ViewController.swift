@@ -40,6 +40,13 @@ class ViewController: UIViewController {
         setupCollectionView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let defaults = UserDefaults.standard
+        defaults.removeObject(forKey: "selectedIndex")
+    }
+    
     // MARK: - Private methods
     fileprivate func setupCollectionView() {
         collectionView.collectionViewLayout = listLayout
@@ -123,6 +130,7 @@ extension ViewController {
     
     func collectionView(_ collectionView: UICollectionView,didSelectItemAtIndexPath indexPath: IndexPath) {
         print("Hi \((indexPath as NSIndexPath).row)")
+        UserDefaults.standard.set(String(indexPath.row), forKey: "selectedIndex")
         let projectInfoVC = storyboard?.instantiateViewController(withIdentifier: "ProjectInfo")
         self.navigationController?.pushViewController(projectInfoVC!, animated: true);
     }

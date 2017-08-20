@@ -12,6 +12,8 @@ class ProjectViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var tableView: UITableView!
     var projectDetails: AnyObject?
+    fileprivate var projects = UserDataProvider().generateFakeUsers()
+    fileprivate var searchProjects = [Projects]()
     var sections = [
         Section(genre: "🦁 Animation",
                 movies: ["The Lion King", "The Incredibles"],
@@ -24,10 +26,34 @@ class ProjectViewController: UIViewController, UITableViewDelegate, UITableViewD
                 expanded: false)
     ]
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+     
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+       let selectedIndexString = (UserDefaults.standard.string(forKey: "selectedIndex"))
+       let selectedIndex: Int = Int(selectedIndexString!)!
+        
+        searchProjects = projects
+        sections = [
+            Section(genre: "🦁 Animation",
+                    movies: [projects[selectedIndex].name, projects[selectedIndex].logo],
+                    expanded: false),
+            Section(genre: "💥 Superhero",
+                    movies: [projects[selectedIndex].name, "The Flash", "The Avengers", "The Dark Knight"],
+                    expanded: false),
+            Section(genre: "👻 Horror",
+                    movies: [projects[selectedIndex].deadline, "Insidious", "Conjuring"],
+                    expanded: false)
+        ]
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
