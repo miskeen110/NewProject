@@ -20,8 +20,10 @@ class ViewController: UIViewController {
     @IBOutlet fileprivate weak var rotationButton: SwitchLayoutButton!
 
     fileprivate var tap: UITapGestureRecognizer!
-    fileprivate var users = UserDataProvider().generateFakeUsers()
-    fileprivate var searchUsers = [User]()
+    fileprivate var projects = UserDataProvider().generateFakeUsers()
+
+    
+    fileprivate var searchProjects = [Projects]()
     fileprivate var isTransitionAvailable = true
     fileprivate lazy var listLayout = DisplaySwitchLayout(staticCellHeight: listLayoutStaticCellHeight, nextLayoutStaticCellHeight: gridLayoutStaticCellHeight, layoutState: .list)
     fileprivate lazy var gridLayout = DisplaySwitchLayout(staticCellHeight: gridLayoutStaticCellHeight, nextLayoutStaticCellHeight: listLayoutStaticCellHeight, layoutState: .grid)
@@ -33,7 +35,7 @@ class ViewController: UIViewController {
         
         tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         
-        searchUsers = users
+        searchProjects = projects
         rotationButton.isSelected = true
         setupCollectionView()
     }
@@ -72,7 +74,7 @@ extension ViewController {
     
     // MARK: - UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return searchUsers.count
+        return searchProjects.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAtIndexPath indexPath: IndexPath) -> UICollectionViewCell {
@@ -82,7 +84,7 @@ extension ViewController {
         } else {
             cell.setupListLayoutConstraints(1, cellWidth: cell.frame.width)
         }
-        cell.bind(searchUsers[(indexPath as NSIndexPath).row])
+        cell.bind(searchProjects[(indexPath as NSIndexPath).row])
         
         return cell
     }
@@ -111,9 +113,9 @@ extension ViewController {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.isEmpty {
-            searchUsers = users
+            searchProjects = projects
         } else {
-            searchUsers = searchUsers.filter { return $0.name.contains(searchText) }
+            searchProjects = searchProjects.filter { return $0.name.contains(searchText) }
         }
         
         collectionView.reloadData()

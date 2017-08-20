@@ -16,9 +16,9 @@ class UserDataProvider {
     var names: [String] = []
     var id: [String] = []
     
-    func generateFakeUsers() -> [User] {
+    func generateFakeUsers() -> [Projects] {
 
-        let user1 = User(name: "Jack", surname: "Hoggarth", avatar:UIImage(named: "placeholder1")!, postsCount: 300, commentsCount: 600, likesCount: 1000)
+        /*let user1 = User(name: "Jack", surname: "Hoggarth", avatar:UIImage(named: "placeholder1")!, postsCount: 300, commentsCount: 600, likesCount: 1000)
         let user2 = User(name: "Mike", surname: "Holiday", avatar: UIImage(named: "placeholder2")!, postsCount: 25, commentsCount: 40, likesCount: 111)
         let user3 = User(name: "Tom", surname: "Jerome", avatar: UIImage(named: "placeholder3")!, postsCount: 13, commentsCount: 145, likesCount: 78)
         let user4 = User(name: "Leo", surname: "Nicholson", avatar: UIImage(named: "placeholder4")!, postsCount: 34, commentsCount: 234, likesCount: 76)
@@ -39,7 +39,7 @@ class UserDataProvider {
         let user19 = User(name: "Cristiano", surname: "Marlow", avatar: UIImage(named: "placeholder19")!, postsCount: 34, commentsCount: 133, likesCount: 3445)
         let user20 = User(name: "Luiz", surname: "Philips", avatar: UIImage(named: "placeholder20")!, postsCount: 34, commentsCount: 24, likesCount: 345)
         
-        let fakeUsers = [user1, user2, user3, user4, user5, user6, user7, user8, user9, user10, user11, user12, user13, user14, user15, user16, user17, user18, user19, user20]
+        let fakeUsers = [user1, user2, user3, user4, user5, user6, user7, user8, user9, user10, user11, user12, user13, user14, user15, user16, user17, user18, user19, user20] */
         
         
       
@@ -85,6 +85,8 @@ class UserDataProvider {
                             let project = Projects(name: name, deadline:deadLine, logo:logo)
                             
                             self.projects.append(project)
+                        
+                          
                             
                             print(self.projects)
                         
@@ -98,10 +100,12 @@ class UserDataProvider {
                     print("Did not receive json")
                 }
         }
-        
+        repeat {
+            RunLoop.current.run(until: Date(timeIntervalSinceNow: 0.1))
+        } while self.projects.isEmpty
 
         
-        return fakeUsers
+        return self.projects
     }
     
     func GetDeadlineFromDateString(DateStr: String)-> Int

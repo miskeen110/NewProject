@@ -36,14 +36,28 @@ class UserCollectionViewCell: UICollectionViewCell, CellInterface {
     fileprivate var avatarGridLayoutSize: CGFloat = 0.0
     fileprivate var initialLabelsLeadingConstraintValue: CGFloat = 0.0
     
-    func bind(_ user: User) {
-        avatarImageView.image = user.avatar
-        nameListLabel.text = user.name.localized + " " + user.surname.localized
-        nameGridLabel.text = nameListLabel.text
-        let userPostsString = (String(user.postsCount) + " posts • ").localized
-        let userCommentsString = (String(user.commentsCount) + " comments • ").localized
-        let userLikesString = (String(user.likesCount) + " likes").localized
-        statisticLabel.text = userPostsString + userCommentsString + userLikesString
+    func bind(_ projects: Projects) {
+        
+        
+        if projects.logo.isEmpty == false {
+            let imageUrl:URL = URL(string: projects.logo)!
+            let imageData:NSData = NSData(contentsOf: imageUrl)!
+            let image = UIImage(data: imageData as Data)
+            avatarImageView.image = image
+        }
+        
+        
+        
+        
+        //avatarImageView.image = user.avatar
+        nameListLabel.text = projects.name
+        nameGridLabel.text = projects.name
+        let deadLine = self.GetDeadlineFromDateString(DateStr: projects.deadline)
+        let deadlineString = (String(deadLine) + " days ").localized
+        let userCommentsString = (String("9") + " to ").localized
+        let userLikesString = (String("10") + " deadline  •").localized
+        statisticLabel.text = deadlineString + userCommentsString + userLikesString
+        //statisticLabel.text = deadlineString + ""+""
     }
     
     func setupGridLayoutConstraints(_ transitionProgress: CGFloat, cellWidth: CGFloat) {
@@ -79,4 +93,34 @@ class UserCollectionViewCell: UICollectionViewCell, CellInterface {
             }
         }
     }
+    
+    func GetDeadlineFromDateString(DateStr: String)-> Int
+    {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyyMMdd"
+        dateFormatter.locale = Locale.init(identifier: "en_GB")
+        
+        let dateObj = dateFormatter.date(from: DateStr)
+        
+        dateFormatter.dateFormat = "MM-dd-yyyy"
+        print("Dateobj: \(dateFormatter.string(from: dateObj!))")
+        
+        let calendar = NSCalendar.current
+        
+        // Replace the hour (time) of both dates with 00:00
+        let date1 = calendar.startOfDay(for: Date())
+        let date2 = calendar.startOfDay(for: dateObj!)
+        
+        let components = calendar.dateComponents([.day], from: date1, to: date2)
+        print(components)
+        
+        let deadlineDays = components .hashValue
+        
+        print(deadlineDays)
+        
+        return components.day!
+    }
+    
+    
 }
