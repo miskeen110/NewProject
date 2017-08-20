@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ja1-GJ-uRC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="dNr-Aq-1ql">
+            <objects>
+                <navigationController id="Ja1-GJ-uRC" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Hpf-d5-wlf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ua1-JY-lG0" kind="relationship" relationship="rootViewController" id="tiI-yC-hHI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v9L-ZH-7dL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-159" y="464"/>
+        </scene>
+        <!--Projects-->
+        <scene sceneID="0ay-mI-u8W">
+            <objects>
+                <viewController id="ua1-JY-lG0" customClass="ViewController" customModule="TeamWorkProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d3o-53-sS9"/>
+                        <viewControllerLayoutGuide type="bottom" id="uNd-3A-UZw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nzv-Dv-f3u">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PkD-Hi-gec">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" text="" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="4zX-Aa-MhH">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <color key="barTintColor" red="0.090196078430000007" green="0.1137254902" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="ua1-JY-lG0" id="vz7-pM-B1k"/>
+                                        </connections>
+                                    </searchBar>
+                                </subviews>
+                                <color key="backgroundColor" red="0.090196078430000007" green="0.1137254902" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="4zX-Aa-MhH" secondAttribute="bottom" id="4Ph-GT-B7v"/>
+                                    <constraint firstAttribute="height" constant="44" id="Fbu-Ou-n8Z"/>
+                                    <constraint firstItem="4zX-Aa-MhH" firstAttribute="leading" secondItem="PkD-Hi-gec" secondAttribute="leading" id="jvE-3L-vjr"/>
+                                    <constraint firstItem="4zX-Aa-MhH" firstAttribute="top" secondItem="PkD-Hi-gec" secondAttribute="top" id="lkA-Qv-kAt"/>
+                                    <constraint firstAttribute="trailing" secondItem="4zX-Aa-MhH" secondAttribute="trailing" id="ryy-x2-I70"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dUi-uu-JQg">
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                                <color key="backgroundColor" red="0.1960784314" green="0.2666666667" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zJV-v6-HGN">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ua1-JY-lG0" id="hf7-y5-hmq"/>
+                                    <outlet property="delegate" destination="ua1-JY-lG0" id="PYf-H1-OrG"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="dUi-uu-JQg" firstAttribute="leading" secondItem="nzv-Dv-f3u" secondAttribute="leading" id="55E-Gg-L4z"/>
+                            <constraint firstItem="dUi-uu-JQg" firstAttribute="top" secondItem="PkD-Hi-gec" secondAttribute="bottom" id="E9c-9r-xTw"/>
+                            <constraint firstItem="uNd-3A-UZw" firstAttribute="top" secondItem="dUi-uu-JQg" secondAttribute="bottom" id="FeF-rm-K0r"/>
+                            <constraint firstAttribute="trailing" secondItem="PkD-Hi-gec" secondAttribute="trailing" id="HHR-cw-TVL"/>
+                            <constraint firstAttribute="trailing" secondItem="dUi-uu-JQg" secondAttribute="trailing" id="a9R-X3-Ltc"/>
+                            <constraint firstItem="PkD-Hi-gec" firstAttribute="leading" secondItem="nzv-Dv-f3u" secondAttribute="leading" id="dZX-AJ-yuk"/>
+                            <constraint firstItem="PkD-Hi-gec" firstAttribute="top" secondItem="d3o-53-sS9" secondAttribute="bottom" id="nof-W6-Dct"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Projects" id="Epl-qk-JXQ">
+                        <barButtonItem key="rightBarButtonItem" width="60" id="3VP-fc-vVK">
+                            <view key="customView" contentMode="scaleToFill" id="ajZ-rk-RKh" userLabel="Container View">
+                                <rect key="frame" x="288" y="5" width="71" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rlo-Mf-x8X" userLabel="Switch Layout Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="71" height="33"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="ua1-JY-lG0" eventType="touchUpInside" id="dNL-h5-G5L"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S97-lc-i38" customClass="SwitchLayoutButton" customModule="DisplaySwitcher">
+                                        <rect key="frame" x="47" y="5" width="18" height="18"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="18" id="D9d-ca-NER"/>
+                                            <constraint firstAttribute="height" constant="18" id="RAE-Bg-d42"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                <color key="value" red="0.6705882353" green="0.97254901959999995" blue="0.74117647060000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="S97-lc-i38" firstAttribute="top" secondItem="ajZ-rk-RKh" secondAttribute="top" constant="5" id="1G8-A6-Ac9"/>
+                                    <constraint firstAttribute="bottom" secondItem="Rlo-Mf-x8X" secondAttribute="bottom" id="2Qu-JA-g2J"/>
+                                    <constraint firstItem="S97-lc-i38" firstAttribute="leading" secondItem="ajZ-rk-RKh" secondAttribute="leading" constant="47" id="AKs-ne-NM5"/>
+                                    <constraint firstItem="Rlo-Mf-x8X" firstAttribute="leading" secondItem="ajZ-rk-RKh" secondAttribute="leading" id="Mef-aO-w8A"/>
+                                    <constraint firstItem="Rlo-Mf-x8X" firstAttribute="top" secondItem="ajZ-rk-RKh" secondAttribute="top" id="pg8-fv-Qmk"/>
+                                    <constraint firstAttribute="trailing" secondItem="Rlo-Mf-x8X" secondAttribute="trailing" id="rKD-OG-ZAf"/>
+                                </constraints>
+                            </view>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="dUi-uu-JQg" id="O0J-EI-91j"/>
+                        <outlet property="rotationButton" destination="S97-lc-i38" id="al4-UA-Zaf"/>
+                        <outlet property="searchBar" destination="4zX-Aa-MhH" id="zNY-d1-yJr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="epQ-FK-pO6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="EfY-8P-Ze9"/>
+            </objects>
+            <point key="canvasLocation" x="656" y="464"/>
+        </scene>
+    </scenes>
+</document>
