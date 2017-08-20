@@ -73,14 +73,92 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TeamWorkProject/UserDataProvider.swift"
-            timestampString = "524924055.749263"
+            filePath = "TeamWorkProject/ProjectViewController.swift"
+            timestampString = "524945298.966781"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
-            landmarkName = "generateFakeUsers()"
-            landmarkType = "7">
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "sections"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TeamWorkProject/ProjectViewController.swift"
+            timestampString = "524945300.36606"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "sections"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TeamWorkProject.ProjectViewController.sections.getter : Swift.Array&lt;TeamWorkProject.Section&gt;"
+                  moduleName = "TeamWorkProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/annatuononen/Documents/TeamWorkProject/TeamWorkProject/ProjectViewController.swift"
+                  timestampString = "524945300.795323"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TeamWorkProject.ProjectViewController.sections.setter : Swift.Array&lt;TeamWorkProject.Section&gt;"
+                  moduleName = "TeamWorkProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/annatuononen/Documents/TeamWorkProject/TeamWorkProject/ProjectViewController.swift"
+                  timestampString = "524945300.80041"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TeamWorkProject.ProjectViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; TeamWorkProject.ProjectViewController"
+                  moduleName = "TeamWorkProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/annatuononen/Documents/TeamWorkProject/TeamWorkProject/ProjectViewController.swift"
+                  timestampString = "524945300.803893"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "182">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TeamWorkProject.ProjectViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;TeamWorkProject.ProjectViewController&gt;"
+                  moduleName = "TeamWorkProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/annatuononen/Documents/TeamWorkProject/TeamWorkProject/ProjectViewController.swift"
+                  timestampString = "524945300.807205"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "105">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

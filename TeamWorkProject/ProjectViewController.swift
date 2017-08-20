@@ -11,7 +11,7 @@ import UIKit
 class ProjectViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ExpandableHeaderViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-    
+    var projectDetails: AnyObject?
     var sections = [
         Section(genre: "🦁 Animation",
                 movies: ["The Lion King", "The Incredibles"],
