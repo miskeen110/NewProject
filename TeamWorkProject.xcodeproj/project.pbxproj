@@ -72,7 +72,7 @@
 		5E30E65A1F4868B8005AE36C /* UserCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCollectionViewCell.swift; sourceTree = "<group>"; };
 		5E30E65B1F4868B8005AE36C /* UserCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserCollectionViewCell.xib; sourceTree = "<group>"; };
 		5E640FDD1F48FF820075BFF6 /* Projects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Projects.swift; sourceTree = "<group>"; };
-		5E640FE11F49C02F0075BFF6 /* teamwork1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = teamwork1.jpg; sourceTree = "<group>"; };
+		5E640FE11F49C02F0075BFF6 /* teamwork1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = teamwork1.jpg; path = ../teamwork1.jpg; sourceTree = "<group>"; };
 		5E640FE31F49D8C70075BFF6 /* ExpandableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableHeaderView.swift; sourceTree = "<group>"; };
 		5E640FED1F49E2BE0075BFF6 /* ProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
 		5E640FEF1F49E32E0075BFF6 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
@@ -135,7 +135,6 @@
 				5E30E6451F48688F005AE36C /* User.swift */,
 				5E30E6471F48689B005AE36C /* CellInterface.swift */,
 				5E30E63E1F486864005AE36C /* UserDataProvider.swift */,
-				5E640FE11F49C02F0075BFF6 /* teamwork1.jpg */,
 				5E640FE31F49D8C70075BFF6 /* ExpandableHeaderView.swift */,
 				5E30E6591F4868B8005AE36C /* UserCollectionViewCell */,
 				5E30E6221F484F14005AE36C /* Main.storyboard */,
@@ -169,6 +168,7 @@
 		5E30E6491F4868A7005AE36C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5E640FF61F4ADF930075BFF6 /* Images */,
 				5E30E64A1F4868A7005AE36C /* Fonts */,
 			);
 			path = Resources;
@@ -195,6 +195,14 @@
 				5E30E65B1F4868B8005AE36C /* UserCollectionViewCell.xib */,
 			);
 			path = UserCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		5E640FF61F4ADF930075BFF6 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				5E640FE11F49C02F0075BFF6 /* teamwork1.jpg */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		6705D74FF3D6244D885A62DC /* Pods */ = {
