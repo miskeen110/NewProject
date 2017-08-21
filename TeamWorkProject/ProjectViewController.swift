@@ -14,8 +14,8 @@ class ProjectViewController: UIViewController, UITableViewDelegate, UITableViewD
     var projectDetails: AnyObject?
     fileprivate var projects = UserDataProvider().generateFakeUsers()
     fileprivate var searchProjects = [Projects]()
-    var sections = [
-        Section(genre: "🦁 Animation",
+    var sections = [Section]()
+     /*   Section(genre: "🦁 Animation",
                 movies: ["The Lion King", "The Incredibles"],
                 expanded: false),
         Section(genre: "💥 Superhero",
@@ -24,7 +24,7 @@ class ProjectViewController: UIViewController, UITableViewDelegate, UITableViewD
         Section(genre: "👻 Horror",
                 movies: ["The Walking Dead", "Insidious", "Conjuring"],
                 expanded: false)
-    ]
+    ]*/
     
     
     
