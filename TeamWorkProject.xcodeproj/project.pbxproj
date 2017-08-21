@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5E30E61F1F484F14005AE36C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E30E61E1F484F14005AE36C /* AppDelegate.swift */; };
-		5E30E6211F484F14005AE36C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E30E6201F484F14005AE36C /* ViewController.swift */; };
+		5E30E6211F484F14005AE36C /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E30E6201F484F14005AE36C /* ProjectsViewController.swift */; };
 		5E30E6241F484F14005AE36C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E30E6221F484F14005AE36C /* Main.storyboard */; };
 		5E30E6261F484F14005AE36C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E30E6251F484F14005AE36C /* Assets.xcassets */; };
 		5E30E6291F484F14005AE36C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E30E6271F484F14005AE36C /* LaunchScreen.storyboard */; };
@@ -30,7 +30,7 @@
 		5E640FDE1F48FF820075BFF6 /* Projects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E640FDD1F48FF820075BFF6 /* Projects.swift */; };
 		5E640FE21F49C02F0075BFF6 /* teamwork1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E640FE11F49C02F0075BFF6 /* teamwork1.jpg */; };
 		5E640FE41F49D8C80075BFF6 /* ExpandableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E640FE31F49D8C70075BFF6 /* ExpandableHeaderView.swift */; };
-		5E640FEE1F49E2BE0075BFF6 /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E640FED1F49E2BE0075BFF6 /* ProjectViewController.swift */; };
+		5E640FEE1F49E2BE0075BFF6 /* ProjectDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E640FED1F49E2BE0075BFF6 /* ProjectDetailsViewController.swift */; };
 		5E640FF01F49E32E0075BFF6 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E640FEF1F49E32E0075BFF6 /* Section.swift */; };
 		9BF3BCA2764F780EEF742CC3 /* Pods_TeamWorkProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E2B0BDE01EE8ADD528ABADF /* Pods_TeamWorkProjectTests.framework */; };
 		A715FE23D6C46F76A5F8B15A /* Pods_TeamWorkProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCA045C365833A5263FF3EDC /* Pods_TeamWorkProject.framework */; };
@@ -49,7 +49,7 @@
 /* Begin PBXFileReference section */
 		5E30E61B1F484F14005AE36C /* TeamWorkProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamWorkProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E30E61E1F484F14005AE36C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5E30E6201F484F14005AE36C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5E30E6201F484F14005AE36C /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		5E30E6231F484F14005AE36C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5E30E6251F484F14005AE36C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E30E6281F484F14005AE36C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 		5E640FDD1F48FF820075BFF6 /* Projects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Projects.swift; sourceTree = "<group>"; };
 		5E640FE11F49C02F0075BFF6 /* teamwork1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = teamwork1.jpg; path = ../teamwork1.jpg; sourceTree = "<group>"; };
 		5E640FE31F49D8C70075BFF6 /* ExpandableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableHeaderView.swift; sourceTree = "<group>"; };
-		5E640FED1F49E2BE0075BFF6 /* ProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
+		5E640FED1F49E2BE0075BFF6 /* ProjectDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectDetailsViewController.swift; sourceTree = "<group>"; };
 		5E640FEF1F49E32E0075BFF6 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		8E2B0BDE01EE8ADD528ABADF /* Pods_TeamWorkProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeamWorkProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4188D0426A7075AFBB03860 /* Pods-TeamWorkProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamWorkProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TeamWorkProject/Pods-TeamWorkProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,9 +128,9 @@
 			isa = PBXGroup;
 			children = (
 				5E30E61E1F484F14005AE36C /* AppDelegate.swift */,
-				5E30E6201F484F14005AE36C /* ViewController.swift */,
+				5E30E6201F484F14005AE36C /* ProjectsViewController.swift */,
 				5E640FEF1F49E32E0075BFF6 /* Section.swift */,
-				5E640FED1F49E2BE0075BFF6 /* ProjectViewController.swift */,
+				5E640FED1F49E2BE0075BFF6 /* ProjectDetailsViewController.swift */,
 				5E640FDD1F48FF820075BFF6 /* Projects.swift */,
 				5E30E6451F48688F005AE36C /* User.swift */,
 				5E30E6471F48689B005AE36C /* CellInterface.swift */,
@@ -449,8 +449,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E640FDE1F48FF820075BFF6 /* Projects.swift in Sources */,
-				5E640FEE1F49E2BE0075BFF6 /* ProjectViewController.swift in Sources */,
-				5E30E6211F484F14005AE36C /* ViewController.swift in Sources */,
+				5E640FEE1F49E2BE0075BFF6 /* ProjectDetailsViewController.swift in Sources */,
+				5E30E6211F484F14005AE36C /* ProjectsViewController.swift in Sources */,
 				5E30E6481F48689B005AE36C /* CellInterface.swift in Sources */,
 				5E30E6441F486871005AE36C /* StringUtitlities.swift in Sources */,
 				5E30E6461F48688F005AE36C /* User.swift in Sources */,

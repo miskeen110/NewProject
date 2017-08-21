@@ -13,7 +13,7 @@ private let animationDuration: TimeInterval = 0.3
 private let listLayoutStaticCellHeight: CGFloat = 80
 private let gridLayoutStaticCellHeight: CGFloat = 165
 
-class ViewController: UIViewController {
+class ProjectsViewController: UIViewController {
     
     @IBOutlet fileprivate weak var collectionView: UICollectionView!
     @IBOutlet fileprivate weak var searchBar: UISearchBar!
@@ -77,7 +77,7 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController {
+extension ProjectsViewController {
     
     // MARK: - UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -116,7 +116,7 @@ extension ViewController {
     
 }
 
-extension ViewController {
+extension ProjectsViewController {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.isEmpty {

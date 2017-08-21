@@ -33,7 +33,7 @@
         <!--Projects-->
         <scene sceneID="0ay-mI-u8W">
             <objects>
-                <viewController id="ua1-JY-lG0" customClass="ViewController" customModule="TeamWorkProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ua1-JY-lG0" customClass="ProjectsViewController" customModule="TeamWorkProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="d3o-53-sS9"/>
                         <viewControllerLayoutGuide type="bottom" id="uNd-3A-UZw"/>
@@ -141,10 +141,10 @@
             </objects>
             <point key="canvasLocation" x="656" y="464"/>
         </scene>
-        <!--Project View Controller-->
+        <!--Project Details View Controller-->
         <scene sceneID="Ufe-Sm-rL5">
             <objects>
-                <viewController storyboardIdentifier="ProjectInfo" id="EIx-Np-1dJ" customClass="ProjectViewController" customModule="TeamWorkProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProjectInfo" id="EIx-Np-1dJ" customClass="ProjectDetailsViewController" customModule="TeamWorkProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dfi-Gj-CoT"/>
                         <viewControllerLayoutGuide type="bottom" id="v7y-JM-uIG"/>
