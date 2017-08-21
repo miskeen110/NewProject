@@ -2,13 +2,14 @@
 //  ViewController.swift
 //  TeamWorkProject
 //
-//  Created by Kaisa Tuononen on 8/19/17.
+//  Created by Miskeen Jatoi on 8/20/17.
 //  Copyright © 2017 myorg. All rights reserved.
 //
 
+
 import UIKit
 import DisplaySwitcher
-
+    /*animation variables of changing list to grid or viceversa*/
 private let animationDuration: TimeInterval = 0.3
 private let listLayoutStaticCellHeight: CGFloat = 80
 private let gridLayoutStaticCellHeight: CGFloat = 165
@@ -20,9 +21,8 @@ class ProjectsViewController: UIViewController {
     @IBOutlet fileprivate weak var rotationButton: SwitchLayoutButton!
 
     fileprivate var tap: UITapGestureRecognizer!
+    /*getting values from API */
     fileprivate var projects = UserDataProvider().generateDataFromAPI()
-
-    
     fileprivate var searchProjects = [Projects]()
     fileprivate var isTransitionAvailable = true
     fileprivate lazy var listLayout = DisplaySwitchLayout(staticCellHeight: listLayoutStaticCellHeight, nextLayoutStaticCellHeight: gridLayoutStaticCellHeight, layoutState: .list)
@@ -34,7 +34,6 @@ class ProjectsViewController: UIViewController {
         super.viewDidLoad()
         
         tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
-        
         searchProjects = projects
         rotationButton.isSelected = true
         setupCollectionView()
@@ -42,7 +41,7 @@ class ProjectsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        /*delete for another selection of index */
         let defaults = UserDefaults.standard
         defaults.removeObject(forKey: "selectedIndex")
     }
@@ -55,6 +54,7 @@ class ProjectsViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func buttonTapped(_ sender: AnyObject) {
+        /*This is the function where layout is changed by calling DisplaySwitcher Pod*/
         if !isTransitionAvailable {
             return
         }
@@ -129,7 +129,11 @@ extension ProjectsViewController {
     }
     
     func collectionView(_ collectionView: UICollectionView,didSelectItemAtIndexPath indexPath: IndexPath) {
-        print("Hi \((indexPath as NSIndexPath).row)")
+        /*********************There are another ways as well to pass data between
+         view controller but i used the use the memory one.
+         Another is define variable into destinationViewController and before pushing set the 
+         value of view controller, which is the easy one.*************/
+        
         UserDefaults.standard.set(String(indexPath.row), forKey: "selectedIndex")
         let projectInfoVC = storyboard?.instantiateViewController(withIdentifier: "ProjectInfo")
         self.navigationController?.pushViewController(projectInfoVC!, animated: true);

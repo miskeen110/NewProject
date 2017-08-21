@@ -2,25 +2,22 @@
 //  ProjectViewController.swift
 //  TeamWorkProject
 //
-//  Created by Kaisa Tuononen on 8/20/17.
+//  Created by Miskeen Jatoi on 8/20/17.
 //  Copyright © 2017 myorg. All rights reserved.
 //
-
 import UIKit
 
 class ProjectDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ExpandableHeaderViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-    var projectDetails: AnyObject?
     fileprivate var projects = UserDataProvider().generateDataFromAPI()
-    fileprivate var searchProjects = [Projects]()
     var sections = [Section]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        /*For Example Description has lot of text, for fluid cell i need to add this UITableViewAutomaticDimension*/
         tableView.rowHeight = UITableViewAutomaticDimension
-       
         /*line separator between cells removed*/
         self.tableView.separatorStyle = .none
         // Do any additional setup after loading the view, typically from a nib.
@@ -29,6 +26,8 @@ class ProjectDetailsViewController: UIViewController, UITableViewDelegate, UITab
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+       
+        /*Getting data and selection index and view in the table with the help of sections */
         
        let selectedIndexString = (UserDefaults.standard.string(forKey: "selectedIndex"))
        let selectedIndex: Int = Int(selectedIndexString!)!
@@ -114,6 +113,7 @@ class ProjectDetailsViewController: UIViewController, UITableViewDelegate, UITab
         }
         tableView.endUpdates()
     }
+    /*This function handles two types of date format, so i created a flag which handles the both type of Date Formats*/
     func GetDateFormat(DateStr: String, completeDateFomat: Bool)-> String
     {
         if completeDateFomat == false{

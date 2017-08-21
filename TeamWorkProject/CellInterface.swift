@@ -1,11 +1,10 @@
 //
 //  CellInterface.swift
-//  YALLayoutTransitioning
+//  TeamWorkProject
 //
-//  Created by Roman on 23.02.16.
-//  Copyright © 2016 Yalantis. All rights reserved.
+//  Created by Miskeen Jatoi on 8/20/17.
+//  Copyright © 2017 myorg. All rights reserved.
 //
-
 import UIKit
 
 protocol CellInterface {

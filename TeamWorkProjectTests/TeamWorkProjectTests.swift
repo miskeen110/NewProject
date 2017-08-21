@@ -1,8 +1,8 @@
 //
 //  TeamWorkProjectTests.swift
-//  TeamWorkProjectTests
+//  TeamWorkProject
 //
-//  Created by Kaisa Tuononen on 8/19/17.
+//  Created by Miskeen Jatoi on 8/20/17.
 //  Copyright © 2017 myorg. All rights reserved.
 //
 

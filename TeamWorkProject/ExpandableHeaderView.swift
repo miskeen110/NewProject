@@ -2,12 +2,12 @@
 //  ExpandableHeaderView.swift
 //  TeamWorkProject
 //
-//  Created by Kaisa Tuononen on 8/20/17.
+//  Created by Miskeen Jatoi on 8/20/17.
 //  Copyright © 2017 myorg. All rights reserved.
 //
 
 import UIKit
-
+/* This class and Protocol is handling expandable header view funcionality */
 protocol ExpandableHeaderViewDelegate {
     func toggleSection(header: ExpandableHeaderView, section: Int)
 }
@@ -42,12 +42,6 @@ class ExpandableHeaderView: UITableViewHeaderFooterView {
         self.contentView.backgroundColor = UIColor.clear
     }
     
-    /*
-     // Only override draw() if you perform custom drawing.
-     // An empty implementation adversely affects performance during animation.
-     override func draw(_ rect: CGRect) {
-     // Drawing code
-     }
-     */
+
     
 }

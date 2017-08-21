@@ -1,11 +1,12 @@
 //
 //  Projects.swift
-//  
+//  TeamWorkProject
 //
-//  Created by Kaisa Tuononen on 8/20/17.
-//
+//  Created by Miskeen Jatoi on 8/20/17.
+//  Copyright © 2017 myorg. All rights reserved.
 //
 
+/*This class arranges the data into format of the class so it can be called and get appropriated values*/
 import UIKit
 
 class Projects {

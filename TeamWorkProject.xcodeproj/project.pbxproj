@@ -59,7 +59,7 @@
 		5E30E63E1F486864005AE36C /* UserDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataProvider.swift; sourceTree = "<group>"; };
 		5E30E6411F486871005AE36C /* CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 		5E30E6421F486871005AE36C /* StringUtitlities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtitlities.swift; sourceTree = "<group>"; };
-		5E30E6471F48689B005AE36C /* CellInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellInterface.swift; sourceTree = "<group>"; };
+		5E30E6471F48689B005AE36C /* CellInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellInterface.swift; path = ../CellInterface.swift; sourceTree = "<group>"; };
 		5E30E64B1F4868A7005AE36C /* Dosis-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dosis-Bold.otf"; sourceTree = "<group>"; };
 		5E30E64C1F4868A7005AE36C /* Dosis-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dosis-ExtraBold.otf"; sourceTree = "<group>"; };
 		5E30E64D1F4868A7005AE36C /* Dosis-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dosis-ExtraLight.otf"; sourceTree = "<group>"; };
@@ -130,7 +130,6 @@
 				5E640FEF1F49E32E0075BFF6 /* Section.swift */,
 				5E640FED1F49E2BE0075BFF6 /* ProjectDetailsViewController.swift */,
 				5E640FDD1F48FF820075BFF6 /* Projects.swift */,
-				5E30E6471F48689B005AE36C /* CellInterface.swift */,
 				5E30E63E1F486864005AE36C /* UserDataProvider.swift */,
 				5E640FE31F49D8C70075BFF6 /* ExpandableHeaderView.swift */,
 				5E30E6591F4868B8005AE36C /* UserCollectionViewCell */,
@@ -188,6 +187,7 @@
 		5E30E6591F4868B8005AE36C /* UserCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				5E30E6471F48689B005AE36C /* CellInterface.swift */,
 				5E30E65A1F4868B8005AE36C /* UserCollectionViewCell.swift */,
 				5E30E65B1F4868B8005AE36C /* UserCollectionViewCell.xib */,
 			);

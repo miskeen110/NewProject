@@ -1,16 +1,16 @@
 //
 //  UserCollectionViewCell.swift
-//  YALLayoutTransitioning
+//  TeamWorkProject
 //
-//  Created by Roman on 23.02.16.
-//  Copyright © 2016 Yalantis. All rights reserved.
+//  Created by Miskeen Jatoi on 8/20/17.
+//  Copyright © 2017 myorg. All rights reserved.
 //
 
 import UIKit
 import DisplaySwitcher
 
 private let avatarListLayoutSize: CGFloat = 80.0
-
+    /*Arranging of tableviewcells and organizing them while changing type of views and getting values so organize them to be displayed*/
 class UserCollectionViewCell: UICollectionViewCell, CellInterface {
     
     @IBOutlet fileprivate weak var avatarImageView: UIImageView!
