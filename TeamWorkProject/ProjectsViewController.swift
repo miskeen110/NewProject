@@ -20,7 +20,7 @@ class ProjectsViewController: UIViewController {
     @IBOutlet fileprivate weak var rotationButton: SwitchLayoutButton!
 
     fileprivate var tap: UITapGestureRecognizer!
-    fileprivate var projects = UserDataProvider().generateFakeUsers()
+    fileprivate var projects = UserDataProvider().generateDataFromAPI()
 
     
     fileprivate var searchProjects = [Projects]()

@@ -12,7 +12,7 @@ class ProjectDetailsViewController: UIViewController, UITableViewDelegate, UITab
     
     @IBOutlet weak var tableView: UITableView!
     var projectDetails: AnyObject?
-    fileprivate var projects = UserDataProvider().generateFakeUsers()
+    fileprivate var projects = UserDataProvider().generateDataFromAPI()
     fileprivate var searchProjects = [Projects]()
     var sections = [Section]()
 
