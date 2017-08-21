@@ -15,23 +15,12 @@ class ProjectViewController: UIViewController, UITableViewDelegate, UITableViewD
     fileprivate var projects = UserDataProvider().generateFakeUsers()
     fileprivate var searchProjects = [Projects]()
     var sections = [Section]()
-     /*   Section(genre: "🦁 Animation",
-                movies: ["The Lion King", "The Incredibles"],
-                expanded: false),
-        Section(genre: "💥 Superhero",
-                movies: ["Guardians of the Galaxy", "The Flash", "The Avengers", "The Dark Knight"],
-                expanded: false),
-        Section(genre: "👻 Horror",
-                movies: ["The Walking Dead", "Insidious", "Conjuring"],
-                expanded: false)
-    ]*/
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.rowHeight = UITableViewAutomaticDimension
+       
         /*line separator between cells removed*/
         self.tableView.separatorStyle = .none
         // Do any additional setup after loading the view, typically from a nib.
@@ -44,17 +33,25 @@ class ProjectViewController: UIViewController, UITableViewDelegate, UITableViewD
        let selectedIndexString = (UserDefaults.standard.string(forKey: "selectedIndex"))
        let selectedIndex: Int = Int(selectedIndexString!)!
         
+       let startDate = self.GetDateFormat(DateStr: projects[selectedIndex].startDate,completeDateFomat: false)
+       let endDate = self.GetDateFormat(DateStr: projects[selectedIndex].deadline,completeDateFomat: false)
+       let createdOn = self.GetDateFormat(DateStr: projects[selectedIndex].createdOn,completeDateFomat: true)
+       let lastChangedOn = self.GetDateFormat(DateStr: projects[selectedIndex].lastChangedOn,completeDateFomat: true)
         sections = [
-            Section(genre: "  Project Overview",
-                    movies: ["Project Id          :    "+projects[selectedIndex].projectId,
-                             "Project Name   :    "+projects[selectedIndex].name,"Start Date      :    "+projects[selectedIndex].startDate,"End Date        :    "+projects[selectedIndex].deadline,
-                             "Created On      :    "+projects[selectedIndex].createdOn,"Last Changed On :    "+projects[selectedIndex].lastChangedOn],
+            Section(heading: "  Project Overview",
+                    details: ["   Project Id           :    "+projects[selectedIndex].projectId,
+                              "   Project Name    :    "+projects[selectedIndex].name,
+                              "   Start Date           :    "+startDate,
+                              "   End Date             :    "+endDate,
+                              "   Created On          :    "+createdOn,
+                              "   Last Changed On :    "+lastChangedOn],
                     expanded: false),
-            Section(genre: "  Project Description",
-                    movies: [projects[selectedIndex].description],
+            Section(heading: "  Project Description",
+                    details: [projects[selectedIndex].description],
                     expanded: false),
-            Section(genre: "  Company Details",
-                    movies: ["Company Id      :    "+projects[selectedIndex].companyId,"Company Name    :    "+projects[selectedIndex].companyName],
+            Section(heading: "  Company Details",
+                    details: ["   Company Id      :    "+projects[selectedIndex].companyId,
+                              "   Company Name    :    "+projects[selectedIndex].companyName],
                     expanded: false)
         ]
     }
@@ -70,11 +67,11 @@ class ProjectViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sections[section].movies.count
+        return sections[section].details.count
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 44
+        return 34
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -90,18 +87,20 @@ class ProjectViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 2
+        return 0
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = ExpandableHeaderView()
-        header.customInit(title: sections[section].genre, section: section, delegate: self)
+        header.customInit(title: sections[section].heading, section: section, delegate: self)
+
         return header
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "labelCell")!
-        cell.textLabel?.text = sections[indexPath.section].movies[indexPath.row]
+        cell.textLabel?.text = sections[indexPath.section].details[indexPath.row]
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
         return cell
     }
     
@@ -110,14 +109,38 @@ class ProjectViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         
         tableView.beginUpdates()
-        for i in 0 ..< sections[section].movies.count {
+        for i in 0 ..< sections[section].details.count {
             tableView.reloadRows(at: [IndexPath(row: i, section: section)], with: .automatic)
         }
         tableView.endUpdates()
     }
-    
-
-    
-
+    func GetDateFormat(DateStr: String, completeDateFomat: Bool)-> String
+    {
+        if completeDateFomat == false{
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyyMMdd"
+            dateFormatter.locale = Locale.init(identifier: "en_GB")
+            let dateObj = dateFormatter.date(from: DateStr)
+            dateFormatter.dateFormat = "MM-dd-yyyy"
+            let dateString = dateFormatter.string(from: dateObj!)
+            
+            return dateString
+        
+        
+        }else{
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+            dateFormatter.locale = Locale.init(identifier: "en_GB")
+            let dateObj = dateFormatter.date(from: DateStr)
+            dateFormatter.dateFormat = "MM-dd-yyyy HH:mm:ss"
+            let dateString = dateFormatter.string(from: dateObj!)
+            
+            return dateString
+            
+        
+        }
+    }
 
 }

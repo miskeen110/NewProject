@@ -9,13 +9,13 @@
 import Foundation
 
 struct Section {
-    var genre: String!
-    var movies: [String]!
+    var heading: String!
+    var details: [String]!
     var expanded: Bool!
     
-    init(genre: String, movies: [String], expanded: Bool) {
-        self.genre = genre
-        self.movies = movies
+    init(heading: String, details: [String], expanded: Bool) {
+        self.heading = heading
+        self.details = details
         self.expanded = expanded
     }
 }

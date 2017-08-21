@@ -105,34 +105,7 @@ class UserDataProvider {
         return self.projects
     }
     
-    func GetDeadlineFromDateString(DateStr: String)-> Int
-    {
-     
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyyMMdd"
-        dateFormatter.locale = Locale.init(identifier: "en_GB")
-        
-        let dateObj = dateFormatter.date(from: DateStr)
-        
-        dateFormatter.dateFormat = "MM-dd-yyyy"
-        print("Dateobj: \(dateFormatter.string(from: dateObj!))")
-        
-        
-        let calendar = NSCalendar.current
-        
-        // Replace the hour (time) of both dates with 00:00
-        let date1 = calendar.startOfDay(for: Date())
-        let date2 = calendar.startOfDay(for: dateObj!)
-        
-        let components = calendar.dateComponents([.day], from: date1, to: date2)
-        print(components)
-        
-        let deadlineDays = components .hashValue
-        
-        print(deadlineDays)
-        
-        return components.day!
-    }
+
         
     
     }

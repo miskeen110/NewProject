@@ -18,7 +18,7 @@
         <scene sceneID="dNr-Aq-1ql">
             <objects>
                 <navigationController id="Ja1-GJ-uRC" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hpf-d5-wlf">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Hpf-d5-wlf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -181,7 +181,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
