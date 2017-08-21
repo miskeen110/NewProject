@@ -79,8 +79,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "19"
             endingLineNumber = "19"
-            landmarkName = "sections"
-            landmarkType = "24">
+            landmarkName = "ProjectViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -95,8 +95,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "17"
             endingLineNumber = "17"
-            landmarkName = "sections"
-            landmarkType = "24">
+            landmarkName = "ProjectViewController"
+            landmarkType = "3">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
@@ -157,6 +157,54 @@
                   startingLineNumber = "15"
                   endingLineNumber = "15"
                   offsetFromSymbolStart = "105">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TeamWorkProject/UserDataProvider.swift"
+            timestampString = "524993481.189771"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "generateFakeUsers()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TeamWorkProject.UserDataProvider.(generateFakeUsers () -&gt; Swift.Array&lt;TeamWorkProject.Projects&gt;).(closure #1)"
+                  moduleName = "TeamWorkProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/annatuononen/Documents/TeamWorkProject/TeamWorkProject/UserDataProvider.swift"
+                  timestampString = "524990864.003329"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "3717">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TeamWorkProject.UserDataProvider.(generateFakeUsers () -&gt; Swift.Array&lt;TeamWorkProject.Projects&gt;).(closure #1)"
+                  moduleName = "TeamWorkProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/annatuononen/Documents/TeamWorkProject/TeamWorkProject/UserDataProvider.swift"
+                  timestampString = "524990864.005913"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "4215">
                </Location>
             </Locations>
          </BreakpointContent>

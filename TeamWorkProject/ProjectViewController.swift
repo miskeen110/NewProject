@@ -30,6 +30,10 @@ class ProjectViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        /*line separator between cells removed*/
+        self.tableView.separatorStyle = .none
         // Do any additional setup after loading the view, typically from a nib.
      
     }
@@ -40,16 +44,17 @@ class ProjectViewController: UIViewController, UITableViewDelegate, UITableViewD
        let selectedIndexString = (UserDefaults.standard.string(forKey: "selectedIndex"))
        let selectedIndex: Int = Int(selectedIndexString!)!
         
-        searchProjects = projects
         sections = [
-            Section(genre: "🦁 Animation",
-                    movies: [projects[selectedIndex].name, projects[selectedIndex].logo],
+            Section(genre: "  Project Overview",
+                    movies: ["Project Id          :    "+projects[selectedIndex].projectId,
+                             "Project Name   :    "+projects[selectedIndex].name,"Start Date      :    "+projects[selectedIndex].startDate,"End Date        :    "+projects[selectedIndex].deadline,
+                             "Created On      :    "+projects[selectedIndex].createdOn,"Last Changed On :    "+projects[selectedIndex].lastChangedOn],
                     expanded: false),
-            Section(genre: "💥 Superhero",
-                    movies: [projects[selectedIndex].name, "The Flash", "The Avengers", "The Dark Knight"],
+            Section(genre: "  Project Description",
+                    movies: [projects[selectedIndex].description],
                     expanded: false),
-            Section(genre: "👻 Horror",
-                    movies: [projects[selectedIndex].deadline, "Insidious", "Conjuring"],
+            Section(genre: "  Company Details",
+                    movies: ["Company Id      :    "+projects[selectedIndex].companyId,"Company Name    :    "+projects[selectedIndex].companyName],
                     expanded: false)
         ]
     }
@@ -74,10 +79,14 @@ class ProjectViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if (sections[indexPath.section].expanded) {
-            return 44
+            return  UITableViewAutomaticDimension
         } else {
             return 0
         }
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {

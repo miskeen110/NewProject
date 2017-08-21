@@ -60,46 +60,43 @@ class UserDataProvider {
                     
                     for index in 0...projects.count-1 {
                         
-                        print(projects)
-                        
                         let aObject = projects[index] as [String : AnyObject]
                         
                         let name = aObject["name"] as! String
                         
                         let deadLine = aObject["endDate"] as! String
-                        
-                        //let deadLine = self.GetDeadlineFromDateString(DateStr: deadLineString)
-                        
-                       // print (deadLine)
+
                         let logo = aObject["logo"] as! String
                         
-                        /*let url = URL(string: logoUrl)
-                        let data = try? Data(contentsOf: url!)
+                        let description = aObject["description"] as! String
                         
+                        let startDate = aObject["startDate"] as! String
                         
-                        if let imageData = data {
-                            
-                            let logo = UIImage(data: imageData)
-                          
-                            }*/
-                            let project = Projects(name: name, deadline:deadLine, logo:logo)
-                            
-                            self.projects.append(project)
+                        let projectId = aObject["id"] as! String
                         
-                          
-                            
-                            print(self.projects)
+                        let lastChangedOn = aObject["last-changed-on"] as! String
                         
-                            print(self.projects[0].name)
-                        
+                        let createdOn = aObject["created-on"] as! String
 
-                        //self.messages.append(message)
-                    }
+                        let company = aObject["company"] as? [String: Any]
+                        let companyName = company?["name"] as? String
+                        let companyId = company?["id"] as? String
+     
+                        let project = Projects(name: name, deadline:deadLine, logo:logo, description: description,
+                                               companyName:companyName!,companyId: companyId!,startDate: startDate,
+                                               projectId:projectId, lastChangedOn: lastChangedOn, createdOn:createdOn)
+                        
+                            self.projects.append(project)
+
+                        }
                     
-                } else {
+                    }
+                    else
+                    {
                     print("Did not receive json")
-                }
-        }
+                    }
+            }
+        
         repeat {
             RunLoop.current.run(until: Date(timeIntervalSinceNow: 0.1))
         } while self.projects.isEmpty
